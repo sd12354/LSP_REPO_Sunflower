@@ -1,0 +1,30 @@
+Part 1
+
+Book
+
+LibraryMember
+
+Librarian
+
+LibrarySystem
+
+Part 2
+
+Book stores book details such as ISBN, author, title etc.
+
+LibraryMember is used to borrow and return books update the library system.
+
+Librarian is used to add and remove books from the Librarys collection and view availability.
+
+LibrarySystem is used to maintain a list of all of the books and their statuses.
+
+
+Part 3
+
+Book collaborates with LibrarySystem and LibraryMember
+
+LibraryMember collaborates with Book and LibrarySystem
+
+Librarian collaborates with LibrarySystem
+
+LibrarySystem collaborates with Book, Librarian, and LibraryMember
