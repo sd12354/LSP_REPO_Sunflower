@@ -1,10 +1,10 @@
 package org.howard.edu.lsp.midterm.question5;
 
-import java.util.*; // Import Java collections for managing playlists
+import java.util.*;
 
 class Music {
     private String title;
-    private List<String> playlists; // Using List to store playlists
+    private List<String> playlists; // Using a List to store playlists
 
     /**
      * Constructor to initialize a music track.
@@ -14,7 +14,6 @@ class Music {
         this.title = title;
         this.playlists = new ArrayList<>(); // Initialize the playlist collection
     }
-
     /** Plays the music track. */
     public void play() {
         System.out.println("Playing music: " + title);
@@ -24,7 +23,7 @@ class Music {
     public void pause() {
         System.out.println("Paused music: " + title);
     }
-
+    
     /** Stops the music track. */
     public void stop() {
         System.out.println("Stopped music: " + title);
