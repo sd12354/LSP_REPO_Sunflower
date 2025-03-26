@@ -8,13 +8,11 @@ import java.util.List;
  */
 public class IntegerSet {
     private List<Integer> set = new ArrayList<Integer>();
-
     /**
      * Default constructor initializes an empty set.
      */
     public IntegerSet() {
     }
-
     /**
      * Constructor that initializes the set with the given elements.
      * @param set An ArrayList of integers
