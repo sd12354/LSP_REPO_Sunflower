@@ -1,0 +1,3 @@
+One situation where using a design pattern might not be beneficial is during a hackathon where speed and simplicity are more important than long-term maintainability. For example, if you're building a small demo app to showcase an idea in 24 hours,
+adding patterns like Factory or Observer might just slow you down and make the code harder to finish on time. In those cases, it’s usually better to write straightforward, functional code that works even if it’s not perfectly structured because the focus is on getting results quickly,
+not building something that is production-ready.
