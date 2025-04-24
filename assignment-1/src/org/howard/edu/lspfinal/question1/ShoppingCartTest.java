@@ -11,11 +11,9 @@ public class ShoppingCartTest {
 
     @BeforeEach
     public void setUp() {
-        cart = new ShoppingCart();  // fresh cart before each test
+        cart = new ShoppingCart();
     }
-
     // 1. ADDING ITEMS
-
     @Test
     @DisplayName("Test for adding valid item")
     public void testAddValidItem() {
@@ -38,7 +36,7 @@ public class ShoppingCartTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             cart.addItem("ScamItem", -5.0);
         });
-        assertEquals("Price must be greater than 0.", exception.getMessage());  // ✅ matches ShoppingCart.java
+        assertEquals("Price must be greater than 0.", exception.getMessage());
     }
 
 
@@ -66,7 +64,6 @@ public class ShoppingCartTest {
         });
         assertEquals("Invalid discount code.", exception.getMessage());
     }
-
     // 3. TOTAL COST TESTS
 
     @Test
@@ -84,17 +81,12 @@ public class ShoppingCartTest {
         cart.applyDiscountCode("SAVE10");
         assertEquals(90.0, cart.getTotalCost());
     }
-
     @Test
     @DisplayName("Test total cost with empty cart")
     public void testTotalCostEmptyCart() {
         assertEquals(0.0, cart.getTotalCost());
     }
-
-    // 4. REMOVE ITEM (since ShoppingCart lacks removeItem() or getItemCount(), these can't be done yet)
-    // If you want to test removeItem(), that method needs to be added to ShoppingCart.
-
-    // BONUS: If empty names should be invalid (optional case):
+    // 4. REMOVE ITEM 
     @Test
     @DisplayName("Test for adding item with empty name (should still add)")
     public void testAddItemWithEmptyName() {
